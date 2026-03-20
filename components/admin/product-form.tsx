@@ -44,7 +44,6 @@ export function ProductForm({
   });
 
   const nameValue = form.watch("name");
-  const slugValue = form.watch("slug");
   const imageUrlValue = form.watch("image_url");
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import type { LucideIcon } from "lucide-react";
 import { LockKeyhole, ShieldCheck } from "lucide-react";
 import { LoginForm } from "@/components/auth/login-form";
@@ -51,7 +52,9 @@ export default function LoginPage() {
         </div>
       </section>
       <section className="flex items-center justify-center px-4 py-16 sm:px-6">
-        <LoginForm />
+        <Suspense fallback={<div className="glass-card w-full max-w-md rounded-[2rem] p-8" />}>
+          <LoginForm />
+        </Suspense>
       </section>
     </main>
   );
